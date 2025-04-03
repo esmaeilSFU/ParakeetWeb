@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>ParakeetWeb.V-01</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="canvasBox1"> <div id="canvasBox2">
+        <canvas id="canvas" class="canvas" width="10000" height="10000"></canvas>
+      </div></div>
+
+      <div id="parameteresBox">
+        <p>Pattern Generator</p>
+        <br>
+        <label for="Xcount" >X-Count :</label>
+        <input class="sld Xcount"type="range"min="1"max="20"value="7"step="1"/>
+        <div class="val Xvalue"> 7</div>
+        <div class="clear"></div>
+        
+        <label for="Ycount" >Y-Count :</label>
+        <input class="sld Ycount"type="range"min="1"max="20"value="7"step="1"/>
+        <div class="val Yvalue"> 7</div><div class="clear"></div>
+
+        <label for="cellSize" >Cell Size :</label>
+        <input class="sld cellSize"type="range"min="20"max="200"value="100"step="1"/>
+        <div class="val cellSizeValue"> 100</div><div class="clear"></div>
+
+        <form >
+          <label>Tilings :</label>
+          <select class="form tilingTypes"">
+            <option value="0">Trianglular</option>
+            <option value="1">square</option>
+            <option value="2">Hexagonal</option>
+            <option value="3">SnubSquare</option>
+            <option value="4">Elongated Trianglular</option>
+            <option value="5">Rhombitri Hexagonal</option>
+            <option value="6">Elongated Triangular</option>
+            <option value="7">SnubTri Hexagonal</option>
+            <option value="8">TriHexagonal</option>
+            <option value="9">Truncated Hexagonal</option>
+            <option value="10">Truncated Square</option>
+            <option value="11">Truncated Trihexagonal</option>
+            <option value="12">Two-Uniform Tiling A</option>
+            <option value="13">Two-Uniform Tiling B</option>
+            <option value="14">Two-Uniform Tiling C</option>
+            <option value="15">Two-Uniform Tiling D</option>
+            <option value="16">Two-Uniform Tiling E</option>
+            <option value="17">Two-Uniform Tiling F</option>
+          </select>
+        </form><div class="clear"></div>
+
+        <form  >
+          <label>GenoType :</label>
+          <select class="form genoTypes"">
+            <option value="0">GT A</option>
+            <option value="1">GT B</option>
+            <option value="2">GT C</option>
+            <option value="3">GT D</option>
+            <option value="4">GT E</option>
+            <option value="5">GT F</option>
+            <option value="6">GT G</option>
+            <option value="7">GT H</option>
+            <option value="8">GT I</option>
+            <option value="9">GT J</option>
+            <option value="10">GT K</option>
+            <option value="11">GT L</option>
+            <option value="12">GT M</option>
+            <option value="13">GT N</option>
+            <option value="14">GT O</option>
+            <option value="15">Star Pattern 1</option>
+            <option value="16">Star Pattern 2</option>
+            <option value="17">none</option>
+          </select>
+        </form><div class="clear"></div>
+
+        <form >
+          Subdivide Quad :<input class ="Check subdivideQuad" type="checkbox"   value="true" >
+          Random :<input class ="Check randomSeam" type="checkbox"   value="true" >
+        </form><div class="clear"></div>
+
+        <label for="param1" > Param 1 :</label>
+        <input class="sld param1"type="range"min="0"max="1.0"value="0.45"step="0.01"/>
+        <div class="val P1value"> 0.45</div><div class="clear"></div>
+
+        <label for="param2" > Param 2 :</label>
+        <input class="sld param2"type="range"min="0"max="1.0"value="0.45"step="0.01"/>
+        <div class="val P2value"> 0.45</div><div class="clear"></div>
+
+        <label for="offsetCount" > Offset Count :</label>
+        <input class="sld offsetCount"type="range"min="0"max="10"value="0"step="1"/>
+        <div class="val ofCntValue"> 0</div><div class="clear"></div>
+
+        <label for="offsetDistance" > Offset Distance :</label>
+        <input class="sld offsetDistance"type="range"min="0"max="15"value="5"step="1"/>
+        <div class="val ofDstValue">6</div><div class="clear"></div>
+
+        <form >
+          Show Grid :<input class ="Check showGrid" type="checkbox"   value="true" >
+        </form><div class="clear"></div><br>
+
+        <label for="thick" > thickness :</label>
+        <input class="sld thick"type="range"min="0"max="10"value="1"step="0.5"/>
+        <div class="val thickValue"> 2</div><div class="clear"></div>
+        
+
+
+      </div>
+    </div>
+
+    <script src="scripts/utilities/thirdParties/clipper.js"></script>
+    <script src="scripts/inspectPrevention.js"></script>
+    <script src="scripts/utilities/Geometric.js"></script>
+    <script src="scripts/utilities/panzoom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.5/math.js"></script>
+    <script src="https://unpkg.com/geometric@2.2.0/build/geometric.js"></script>
+    
+    <script src="scripts/src/tilings/tilings.js"></script>
+    <script src="scripts/src/tilingCom.js"></script>
+    <script src="scripts/src/tilings/genoTypes.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
